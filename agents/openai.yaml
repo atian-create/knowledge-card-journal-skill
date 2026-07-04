@@ -1,0 +1,4 @@
+interface:
+  display_name: "知识卡片整理 Skill"
+  short_description: "把截图笔记链接整理成阿甜风格的米色手帐知识卡片和可发布卡片文案"
+  default_prompt: "把这段原始内容整理成 3 到 5 张阿甜风格的米色手帐知识卡片。"

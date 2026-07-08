@@ -11,7 +11,7 @@ It is one complete 3:4 poster that teaches a topic on one page.
 Works best for:
 - 方法类
 - 清单类
-- 结构拆解类
+- 结构分析类
 - 时间管理类
 - 学习方法类
 - 成长系统类

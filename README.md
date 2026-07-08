@@ -1,4 +1,4 @@
-# Knowledge Card Journal Skill
+# 知识卡片手帐 Skill
 
 把截图、笔记、链接、语音稿整理成阿甜风格的米色手帐知识卡。
 
@@ -6,18 +6,18 @@
 
 ## Search Keywords
 
+中文关键词：
+
+`知识卡片`, `手帐卡片`, `小红书知识卡`, `小红书图文卡片`,
+`截图整理`, `笔记整理`, `语音稿整理`, `内容卡片`, `知识库整理`,
+`创作者素材整理`, `米色手帐风`, `知识图`, `高信息密度海报`.
+
 English keywords:
 
 `knowledge card`, `journal card`, `creator notes`, `visual note taking`,
 `social media carousel`, `Xiaohongshu cards`, `RedNote content`,
 `note to cards`, `AI skill for creators`, `content repurposing`,
-`personal knowledge base`.
-
-中文关键词：
-
-`知识卡片`, `手帐卡片`, `小红书知识卡`, `小红书图文卡片`,
-`截图整理`, `笔记整理`, `语音稿整理`, `内容卡片`, `知识库整理`,
-`创作者素材整理`, `米色手帐风`.
+`personal knowledge base`, `infographic poster`.
 
 ## What It Does
 

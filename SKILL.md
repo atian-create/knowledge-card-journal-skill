@@ -1,221 +1,285 @@
 ---
 name: knowledge-card-journal
-description: Use when raw notes, screenshots, Xiaohongshu posts, links, or voice transcripts need to be turned into A Tian style beige journal knowledge cards with clear structure, card-ready copy, and next-step publishing directions.
+description: 把截图、笔记、内容链接、语音稿或零散素材整理成阿甜风格的米色手帐知识卡片，输出可直接用于小红书 / RedNote 发图、知识库收藏或公众号展开的卡片文案、知识图结构和下一步发布建议。
 ---
 
-# Knowledge Card Journal
+# 知识卡片手帐 Skill
 
-## Overview
+## 这个 Skill 是做什么的
 
-This skill turns messy content into small, publishable knowledge outputs.
-It is not a generic summarizer. It should output either:
-- card-ready copy, or
-- a dense A Tian hand-account infographic poster structure
+这个 Skill 用来把散乱内容整理成可以发布、可以收藏、可以继续展开的知识卡片。
 
-The style target is A Tian's beige journal system: calm but clear judgment, cute educational poster feel, strong readability, thick outlined titles, pastel content blocks, and content that can really be laid out later.
+它不是通用总结器，也不是单纯的生图提示词工具。它的核心结果是：
 
-Use this skill when the user wants one of these outcomes:
-- turn a Xiaohongshu post, note, or screenshots into 3-5 knowledge cards
-- turn one idea into A Tian style beige journal card copy
-- turn a long piece of knowledge into one dense hand-account infographic poster
-- organize content for later posting, saving, or building a personal knowledge base
-- convert raw material into a card set instead of a long article
+- 把一段内容压成一个清楚判断。
+- 把截图、链接、笔记、语音稿整理成 3-5 张知识卡片文案。
+- 把复杂内容整理成一张 3:4 高信息密度知识图结构。
+- 给出适合后续排版、生图、发小红书或沉淀知识库的下一步建议。
 
-Do not use this skill when the user actually wants:
-- a long-form article
-- a pure technical summary
-- only image generation without card copy
-- a generic prompt list with no structured output
+默认风格是阿甜的米色手帐系统：奶油纸底、黑描边标题、彩色信息块、短标题、短句子、小贴纸、手写强调线，有判断但不堆信息。
 
-## Workflow
+## 适合什么时候用
 
-### 1. Read the raw material
+当用户有这些需求时，使用这个 Skill：
 
-Acceptable inputs:
-- pasted text
-- transcript
-- OCR text from screenshots
-- a content link after the content has been fetched
-- scattered user notes
+- 把一篇文章、笔记或内容链接整理成小红书知识卡片。
+- 把一组截图 OCR 整理成 3-5 张卡片文案。
+- 把一段语音稿或播客逐字稿压成知识卡。
+- 把一个灵感、方法、清单或观点整理成 3:4 知识图。
+- 把收藏的素材变成能发、能存、能继续展开公众号的内容块。
+- 把长内容整理成「小红书发图版 / 知识库收藏版 / 公众号展开版」的前置结构。
 
-First identify:
-- the real topic
-- the one core judgment
-- 3-5 usable sub-points
-- whether the material is better for knowledge cards, emotional cards, or action cards
+## 不适合什么时候用
 
-If the material is weak, say so briefly and tighten the scope instead of faking depth.
+不要在这些情况下使用这个 Skill：
 
-### 2. Compress into cards
+- 用户要的是完整长文，而不是卡片。
+- 用户要的是纯技术摘要。
+- 用户只想要图片生成，不需要卡片文案或结构。
+- 用户要的是一堆泛泛提示词，而不是明确的知识卡片输出。
+- 输入材料太空，无法判断主题和观点，却要求强行生成很深的内容。
 
-Each card should do one job only.
+## 可以接收的输入
 
-Good card traits:
-- one short title
-- one clear point
-- 2-4 short lines of support
-- no bloated explanation
-- no assistant-sounding filler
+可以接收：
 
-Default to 3-5 cards.
-Do not output 8-10 cards unless the user explicitly wants a larger set.
+- 粘贴文本
+- 文章草稿
+- 小红书 / RedNote / 公众号 / 网页内容链接
+- 已经提取出来的链接正文
+- 截图 OCR
+- 语音转文字
+- 播客逐字稿
+- 零散笔记
+- 灵感清单
 
-### 2B. Or compress into one poster
+如果用户只给了链接，但当前环境不能读取链接内容，不要假装已经读过。请让用户补充正文、截图 OCR、摘要，或交给具备网页读取能力的工具先获取内容。
 
-Use poster mode when the user wants:
-- a single Xiaohongshu-ready infographic
-- dense educational content on one page
-- a result closer to A Tian's old hand-account posters than a multi-card carousel
+## 工作流
 
-Poster mode should not be a wall of text.
-It should be one clear teaching flow with fixed sections.
+### 1. 先读懂素材
 
-### 3. Apply A Tian style
+先判断：
 
-Visual/tone guidance:
-- beige journal feeling, not business PPT
-- calm, direct, third-person or light editorial phrasing
-- short titles
-- restrained emotional tone
-- useful over pretty
-- keep lines short enough to be placeable on a card or poster block later
+- 真实主题是什么
+- 这组内容最值得保留的核心判断是什么
+- 能不能拆出 3-5 个有效分点
+- 更适合做知识卡、情绪卡、行动卡，还是单张知识海报
 
-Poster-specific visual guidance:
-- 3:4 vertical poster
-- cream paper or notebook background
-- thick black outlined main title
-- pastel rounded content blocks
-- cute sticker-style A Tian mascot
-- small icons, stars, arrows, clocks, planets, tape, or notebook doodles
-- high information density but still scannable
-- top title, middle teaching flow, bottom summary
-- each block should teach one clear sub-part
+如果素材很弱，要直接收窄范围，不要假装很有深度。
 
-Avoid:
-- generic motivational tone
-- over-designed copy
-- too many buzzwords
-- long paragraphs that cannot fit a card
-- sounding like "AI summarized this"
+### 2. 再压成卡片
 
-### 4. Choose the right ending
+每张卡片只做一件事。
 
-The output should end with two things:
-- one `一句判断`
-- one `下一步建议`
+好卡片应该是：
 
-This is the part the user said they may forget. Keep it stable.
+- 一个短标题
+- 一个明确观点
+- 2-4 行短句支撑
+- 没有长段落
+- 没有 AI 总结腔
+- 读者一眼知道这张卡要讲什么
 
-Recommended final two lines:
+默认输出 3-5 张卡片。除非用户明确要求更多，不要输出 8-10 张。
+
+### 3. 或者压成一张知识图
+
+当用户说「手帐图」「海报版」「3:4 知识图」「高信息密度发图」时，使用单张 poster mode。
+
+poster mode 不是把文章塞进一张图里，而是把内容整理成一个清楚的教学结构。
+
+默认结构：
+
+1. 顶部标题区
+2. 引言判断区
+3. 四个主体内容块
+4. 人物与贴纸区
+5. 底部总结区
+
+每个内容块都要短、清楚、能被放进图里。
+
+### 4. 套用阿甜米色手帐风
+
+视觉和语气方向：
+
+- 米色手帐感，不要商务 PPT 感
+- 奶油纸底或笔记本背景
+- 黑描边大标题
+- 彩色信息块
+- 小贴纸、小图标、箭头、胶带、星星、时钟、笔记本涂鸦
+- 语言直接，有判断，不煽情
+- 短句优先，方便后续排版
+
+避免：
+
+- 大段鸡汤
+- 太多抽象词
+- 过度包装
+- 一张卡塞太多信息
+- 看起来像 AI 摘要
+
+### 5. 最后一定要收口
+
+输出结尾必须包含：
+
+- `一句判断`
+- `下一步`
+
+推荐格式：
+
 - `一句判断：这组内容更适合被整理成[知识卡/情绪卡/行动卡]，重点不是信息多，而是判断准。`
 - `下一步：如果要，我可以继续把这组内容改成小红书发图版、知识库收藏版，或公众号展开版。`
 
-## Output Contract
+## 默认输出格式
 
-Default output shape:
-
+```markdown
 ### 主题
-One line only.
+一句话写清楚。
 
 ### 核心判断
-One short paragraph or 2-3 short lines.
+2-3 行，讲清楚这组内容真正值得被做成卡片的原因。
 
 ### 卡片 1
-`标题`
-2-4 short lines.
+标题：
+短句：
+短句：
+短句：
 
 ### 卡片 2
-`标题`
-2-4 short lines.
+标题：
+短句：
+短句：
+短句：
 
 ### 卡片 3
-`标题`
-2-4 short lines.
+标题：
+短句：
+短句：
+短句：
 
-Optional:
-- 卡片 4
-- 卡片 5
+### 卡片 4
+标题：
+短句：
+短句：
+短句：
 
 ### 风格备注
-Brief note for later layout, for example:
-- beige journal
-- sparse layout
-- handwritten emphasis
-- one small sticker or underline per card
+米色手帐 / 小红书知识卡 / 黑描边标题 / 彩色信息块 / 小贴纸。
 
 ### 一句判断
-One sentence.
+一句话收束。
 
 ### 下一步
-Offer exactly 2-3 concrete follow-up formats, not an open-ended brainstorm.
+给 2-3 个具体去向，例如：小红书发图版、知识库收藏版、公众号展开版。
+```
 
-## Poster Template Contract
+## 单张知识图输出格式
 
-Use this mode when the user asks for:
-- 手帐图
-- 海报版
-- 3:4 知识图
-- 高信息密度发图
+当用户要「一张图」时，使用这个结构：
 
-Default poster structure:
+```markdown
+### 图片类型
+3:4 高信息密度米色手帐知识图。
 
-### 1. 顶部标题区
-- one long main title
-- one short subtitle
-- 3-4 small tags
+### 顶部标题区
+- 主标题：
+- 副标题：
+- 小标签：
 
-### 2. 引言区
-- one short opening judgment
-- one data point, contrast, or pain point
+### 引言区
+- 开场判断：
+- 痛点 / 对比 / 场景：
 
-### 3. 主体内容区
-- usually 4 blocks
-- each block has:
-  - one block title
-  - 2-4 short bullets
-  - one yellow-style highlight sentence or sticker takeaway
+### 主体内容区
+#### 模块 1
+- 标题：
+- 要点：
+- 高亮句：
 
-### 4. 人物与贴纸区
-- A Tian mascot in center or near center
-- icons should support the content, not decorate randomly
+#### 模块 2
+- 标题：
+- 要点：
+- 高亮句：
 
-### 5. 底部总结区
-- one short summary title
-- one compact wrap-up
-- one strong closing line
+#### 模块 3
+- 标题：
+- 要点：
+- 高亮句：
 
-Important:
-- keep each block visually distinct
-- do not overfill any single block
-- compress wording before adding more sections
-- poster mode is structure-first, not paragraph-first
+#### 模块 4
+- 标题：
+- 要点：
+- 高亮句：
 
-## Testing
+### 人物与贴纸区
+- 人物 / 吉祥物位置：
+- 贴纸元素：
 
-Use the smallest possible test first.
+### 底部总结区
+- 总结标题：
+- 收口句：
+- 行动建议：
+```
 
-### Test 1: Plain text input
-Give the skill one short paragraph and check:
-- did it find the real topic
-- did it compress into 3-5 cards
-- are the titles short enough
-- does the final `一句判断 + 下一步` appear
+## 和灵造一起用
 
-### Test 2: Screenshot-like messy input
-Give it fragmented text and check:
-- did it clean the structure without hallucinating
-- did it preserve the useful point
-- did it stay card-like instead of article-like
+这个 Skill 本身负责把内容整理成知识卡片文案和知识图结构。
 
-### Test 3: Style check
-Read the output and ask:
-- does this sound like beige journal cards
-- can each card fit on an image
-- is it useful enough to save or post
+如果用户希望直接读取公开链接内容、分析小红书 / 抖音 / 公众号公开内容，或者继续生成真正的封面、配图、海报图片，可以配合灵造主 Skill 使用。
 
-If any test fails, tighten card count, shorten titles, and reduce explanation.
+对外说明时要讲清楚：
 
-## Reference
+- 免费 Skill：负责内容整理、卡片结构、知识图文案、发布方向。
+- 灵造能力：负责公开内容查询、链接内容读取、评论观察、短视频文案提取、图片生成。
 
-For a concrete example input/output pair, read [references/test-case.md](references/test-case.md).
-For the fixed infographic layout, read [references/poster-template.md](references/poster-template.md).
+不要承诺自动发布、自动涨粉、必出爆款，也不要复制别人的内容或图片。
+
+## 搜索关键词
+
+中文关键词：
+
+`知识卡片`, `手帐卡片`, `小红书知识卡`, `小红书图文卡片`,
+`截图整理`, `笔记整理`, `语音稿整理`, `内容卡片`, `知识库整理`,
+`创作者素材整理`, `米色手帐风`, `知识图`, `高信息密度海报`.
+
+English keywords:
+
+`knowledge card`, `journal card`, `creator notes`, `visual note taking`,
+`social media carousel`, `Xiaohongshu cards`, `RedNote content`,
+`note to cards`, `AI skill for creators`, `content repurposing`,
+`personal knowledge base`, `infographic poster`.
+
+## 测试方式
+
+### 测试 1：短文本
+
+给一段短文本，检查：
+
+- 是否找到了真实主题
+- 是否压成 3-5 张卡片
+- 标题是否足够短
+- 是否包含 `一句判断 + 下一步`
+
+### 测试 2：截图 OCR
+
+给一组碎片化 OCR，检查：
+
+- 是否整理了结构
+- 是否避免编造
+- 是否保留了最有用的观点
+- 是否像卡片，而不是文章
+
+### 测试 3：知识图
+
+给一段方法类内容，要求输出 3:4 知识图结构，检查：
+
+- 是否有顶部标题区、引言区、主体模块、贴纸区、底部总结区
+- 每个模块是否能放进图里
+- 是否仍然有阿甜米色手帐风
+
+## 参考文件
+
+- `references/test-case.md`：基础卡片案例
+- `references/poster-template.md`：固定知识图结构
+- `references/poster-case-commute.md`：通勤时间海报案例
